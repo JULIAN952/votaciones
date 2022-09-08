@@ -1,0 +1,100 @@
+package taller4;
+
+import java.util.Scanner;
+
+public class Taller4 {
+
+    public static void main(String[] args) {
+      Scanner Datos = new Scanner (System.in);  
+        double pcedula,acum=0;
+        int menu, CON1=1,con=1,Contador1=0,Contador2=0,Contador3=0,Contador4=0;
+        int CONTA1=0,CONTA2=0,CONTA3=0,CONTA4=0,ACU2=0;
+        int ciudad=0;
+    
+        CON1=1;
+     CONTA1=0;CONTA2=0;CONTA3=0;CONTA4=0;ACU2=0;      
+     while (CON1==1)//contar ciudades
+     {   
+         con=1;
+         ciudad=ciudad+1;
+        System.out.println("Bienvenido al programa de elecciones está en la ciudad "+ ciudad);  
+        Contador1=0;Contador2=0;Contador3=0;Contador4=0;acum=0;
+     
+        while (con==1)//contar votantes (personas)
+        {
+        System.out.println("Bienvenido al programa de elecciones en Piedra Dura"); 
+        System.out.println("Por favor digite su Piedra Cédula: "); 
+        pcedula = Datos.nextDouble();
+        System.out.println("Por favor elija por quien desea votar: "); 
+        System.out.println("1. Votó por Pedro"); 
+        System.out.println("2. Votó por Pablo"); 
+        System.out.println("3. Votó por Vilma"); 
+        System.out.println("4. Votó en blanco"); 
+        menu = Datos.nextInt();
+        
+        switch(menu) {
+        
+            case 1: 
+                System.out.println("Su Piedra Cédula es: " + pcedula); 
+                System.out.println("Felicitraciones su votó ha sido guardado."); 
+                acum=acum+1;
+                ACU2=ACU2+1;
+                Contador1++;
+                CONTA1++;
+                break;
+            case 2:
+                System.out.println("Su Piedra Cédula es: " + pcedula); 
+                System.out.println("Felicitraciones su votó ha sido guardado."); 
+                acum=acum+1;
+                ACU2=ACU2+1;
+                Contador2++;
+                CONTA2++;
+                break;
+             case 3:   
+                System.out.println("Su Piedra Cédula es: " + pcedula); 
+                System.out.println("Felicitaciones su votó ha sido guardado."); 
+                acum=acum+1;
+                ACU2=ACU2+1;
+                Contador3++;
+                CONTA3++;
+                break;
+             case 4:   
+                System.out.println("Su Piedra Cédula es: " + pcedula); 
+                System.out.println("Felicitaciones su votó ha sido guardado.");
+                acum=acum+1;
+                ACU2=ACU2+1;
+                Contador4++;
+                CONTA4++;
+                break;
+                 
+                default : System.out.println("Opcion incorrecta."); 
+                break;
+                               
+        }
+         System.out.println("Por favor digite 1 si desea continuar o eliga otro digito si desea finalizar.");   
+         con=Datos.nextInt();
+         
+        }
+        System.out.println("Votos por Pedro. " + Contador1);
+        System.out.println("Votos por Pablo. " + Contador2);
+        System.out.println("Votos por Vilma. " + Contador3);
+        System.out.println("Votos en Blanco. " + Contador4);
+        System.out.println("El total de votos es de: " + acum);
+        //contar y acumular
+      System.out.println("Por favor digite 1 si desea continuar  con otra ciudad o eliga otro digito si desea finalizar.");   
+      CON1=Datos.nextInt();
+      
+      //otros totales 
+      //total de cada candidato de todas las ciudades y total de votantes
+      
+     }
+        System.out.println("El total de votos por Pedro. " + CONTA1);
+        System.out.println("El total de votos por Pablo. " + CONTA2);
+        System.out.println("El total de votos por Vilma. " + CONTA3);
+        System.out.println("El total de votos en Blanco. " + CONTA4);
+        System.out.println("El total de votos de todas las ciudades: " + ACU2);
+     
+     
+     }
+    
+}
